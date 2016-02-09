@@ -13,6 +13,7 @@ author:
   name:               Richard Osterloh
   email:              richard.osterloh@gmail.com
   twitter_username:   richard84
+  # facebook_username: richard.osterloh
   github_username:    rosterloh
   linkedin_username:  richardosterloh
 
@@ -20,7 +21,7 @@ author:
 #destination: _site
 #permalink: /:year/:title/
 #markdown: kramdown
-#highlighter: pygments
+highlighter: rouge
 
 kramdown:
   # use Github Flavored Markdown
