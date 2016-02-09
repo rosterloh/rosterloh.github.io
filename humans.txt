@@ -1,0 +1,11 @@
+/* TEAM */
+Developer & Designer: Richard Osterloh
+Twitter: @richard84
+Site: http://rosterloh.github.io
+Location: Aylesbury, UK
+
+/* SITE */
+Last update: 2016/02/09
+Standards: HTML5, CSS3
+Components: Jekyll
+Software: Atom

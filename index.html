@@ -1,105 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+---
+layout: default
+---
 
-	
-	<title>rosterloh.github.io</title>
-	<meta name="description" content="Placeholder for greatness" />
+<div class="main-post-list">
 
-	<meta name="HandheldFriendly" content="True" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <ol class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        <p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}&hellip;</p>
+        <div class="post-list__meta"><time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time> &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span></div>
+        <hr class="post-list__divider">
+      </li>
+    {% endfor %}
+  </ol>
 
-	<link rel="shortcut icon" href="favicon.ico">
+  <hr class="post-list__divider ">
 
-	
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css?v=c620711dae" />
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen" />
+  {% if paginator.previous_page or paginator.next_page %}
+      {% include pagination.html %}
+  {% endif %}
 
-	
-	<meta name="generator" content="Ghost 0.4" />
-<link rel="alternate" type="application/rss+xml" title="rosterloh.github.io" href="rss/index.html">
-<link rel="canonical" href="http://my-ghost-blog.com/" />
-</head>
-<body class="home-template blog-has-cover">
-
-	
-	
-
-
-	<div class="blog-cover" style="background-image: url(content/images/2014/Mar/IMG_20130216_131907.jpg);"></div>
-
-
-<div class="site-main home">
-
-<header class="site-header">
-	<a class="blog-logo" href="http://my-ghost-blog.com"><img src="content/images/2014/Mar/Decode_Logo_Transparent_1.png" alt="Blog Logo" /></a>
-	<h1 class="blog-title"><a href="http://my-ghost-blog.com">rosterloh.github.io</a></h1>
-	<h2 class="blog-description">Placeholder for greatness</h2>
-</header>
-
-
-<main class="site-content" role="main">
-
-	
-	
-
-	<article class="post tag-getting-started">
-		<header class="post-header">
-			<h2 class="post-title"><a href="welcome-to-ghost/index.html">Welcome to Ghost</a></h2>
-			<a class="post-meta" href="welcome-to-ghost/index.html">Posted on <time datetime="2014-03-21">21 March 2014</time></a>
-		</header>
-		
-		<section class="post-excerpt">
-			<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;your blog URL&gt;/ghost/. When you arrive, you can select this post from a list&hellip;</p>
-		</section>
-		
-		<footer class="post-footer">
-			<div class="post-tags">Tagged with: Getting Started</div>
-		</footer> 
-	</article>
-
-	
-
-	
-	<nav class="pagination" role="pagination">
-     <span class="page-number">Page 1 of 1</span>
-    
-    <nav class="page-nav cf">
-    
-    
-   
-    
-    
-    </nav>
-</nav>
-
-</main>
-
-	<footer class="site-footer">
-		<a class="subscribe icon-feed" href="http://my-ghost-blog.com/rss/"><span class="tooltip">RSS</span></a>
-		<div class="inner">
-			 <section class="copyright">All content copyright <a href="http://my-ghost-blog.com/">rosterloh.github.io</a> &copy; 2014 &bull; All rights reserved.</section>
-			 <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
-			 <section class="themeinfo"><a href="http://scotthsmith.com/projects/decode/">Decode</a> by <a href="http://scotthsmith.com">Scott Smith</a></section>
-		</div>
-	</footer>
 </div>
-	
-	
-	<script src="shared/vendor/jquery/jquery.js?v=c620711dae"></script>
-	<script>
-  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  		ga('create', 'UA-49296776-1', 'rosterloh.github.io');
-  		ga('send', 'pageview');
-
-	</script>
-
-</body>
-</html>
