@@ -8,6 +8,7 @@ url:              rosterloh.github.io
 paginate:         10
 baseurl:          /
 google_analytics: UA-49296776-1
+disqus_shortname: 'rosterloh'
 
 author:
   name:               Richard Osterloh
@@ -16,6 +17,14 @@ author:
   # facebook_username: richard.osterloh
   github_username:    rosterloh
   linkedin_username:  richardosterloh
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
 # Build settings
 #destination: _site
