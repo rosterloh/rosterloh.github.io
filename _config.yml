@@ -9,14 +9,17 @@ paginate:         10
 baseurl:          /
 google_analytics: UA-49296776-1
 disqus_shortname: 'rosterloh'
+profile_image:    'images/profile.jpeg'
+cover_image:      'images/gears.jpg'
 
 author:
   name:               Richard Osterloh
   email:              richard.osterloh@gmail.com
-  twitter_username:   richard84
+  twitter_username:   riosterloh
   # facebook_username: richard.osterloh
   github_username:    rosterloh
   linkedin_username:  richardosterloh
+  instagram_username: riosterloh
 
 defaults:
   -
